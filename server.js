@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 app.post("/create-order", async (req, res) => {
   try {
     const order = await razorpay.orders.create({
-      amount: 100, // ₹1 = 100 paise
+      amount: 1000, // ₹1 = 100 paise
       currency: "INR",
       receipt: "receipt_" + Date.now(),
     });
